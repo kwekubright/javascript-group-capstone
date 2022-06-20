@@ -10,7 +10,7 @@ export default class RenderElement {
     if (this.clearContent) {
       this.parent.innerHTML = '';
     }
-    
+
     this.parent.insertAdjacentHTML(this.position, this.element);
   }
 }
