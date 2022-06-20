@@ -11,5 +11,4 @@ export const renderDocument = () => {
     renderElement.render();
   });
 
-  loadScoreBoardFromService();
 }
