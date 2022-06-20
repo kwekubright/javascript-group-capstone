@@ -1,4 +1,4 @@
-import { RenderElement } from "./RenderElement.mod";
+import RenderElement from "./RenderElement.mod";
 
 export const renderDocument = () => {
   const documentBody = document.querySelector('body');

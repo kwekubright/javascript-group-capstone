@@ -1,5 +1,5 @@
-export class RenderElement {
-  constructor(element, parent, position = "beforeend", clearContent = false) {
+export default class RenderElement {
+  constructor(element, parent, position = 'beforeend', clearContent = false) {
     this.element = element;
     this.parent = parent;
     this.position = position;
@@ -8,7 +8,7 @@ export class RenderElement {
 
   render() {
     if (this.clearContent) {
-      this.parent.innerHTML = "";
+      this.parent.innerHTML = '';
     }
     
     this.parent.insertAdjacentHTML(this.position, this.element);

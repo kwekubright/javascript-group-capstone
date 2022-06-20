@@ -1,3 +1,1 @@
-export class ApiServices {
-  
-}
+export default class ApiServices {}
