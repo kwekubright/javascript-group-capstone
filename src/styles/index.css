@@ -212,3 +212,28 @@
 .margin-left-3 {
   margin-left: 20px;
 }
+
+/* Background Colors */
+.bg-primary {
+  background-color: #4f26cb;
+}
+
+.bg-text {
+  background-color: #19191a;
+}
+
+.bg-success {
+  background-color: #6cc052;
+}
+
+.bg-danger {
+  background-color: #e64d4d;
+}
+
+.bg-warning {
+  background-color: #f9a825;
+}
+
+.bg-info {
+  background-color: #3da4ff;
+}
