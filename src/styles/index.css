@@ -237,3 +237,30 @@
 .bg-info {
   background-color: #3da4ff;
 }
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  box-shadow: 2px 2px 15px #ccc;
+}
+header img {
+  width: 180px;
+  height: 130px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7
+}
+
+.nav-list li {
+  height: 40px;
+}
+.nav-list li:hover {
+  border-bottom: 2px solid rgba(230, 77, 77, 0.6);
+}
