@@ -285,3 +285,46 @@ a {
   width: 100%;
   height: 230px;
 }
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.movie:hover {
+  box-shadow: 4px 4px 15px #ccc;
+}
+
+.movie button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  background-color: rgba(51, 51, 51, 0.1);
+  font-weight: 600;
+}
+
+.movie button:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+.likes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.likes i:hover {
+  cursor: pointer;
+}
