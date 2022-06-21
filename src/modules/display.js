@@ -1,5 +1,4 @@
-import fetchData from "./fetctData";
-import { showcase } from "./variables";
+import fetchData from './fetctData.js';
 
 const display = async () => {
   // Execution

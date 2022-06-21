@@ -3,5 +3,5 @@ const showcase = document.querySelector('#showcase');
 
 export {
   baseUrl,
-  showcase
-}
+  showcase,
+};

@@ -1,6 +1,7 @@
-import { showcase } from "./variables";
+import { showcase } from './variables.js';
+
 const processResult = (prop) => {
-  for(let i = 0; i < prop.length; i++){
+  for (let i = 0; i < prop.length; i += 1) {
     const { show } = prop[i];
     showcase.innerHTML += `
   <div class="movie">
@@ -15,8 +16,8 @@ const processResult = (prop) => {
     <button>Comments</button>
     <button>Reservations</button>
   </div>
-  `
+  `;
   }
-}
+};
 
 export default processResult;

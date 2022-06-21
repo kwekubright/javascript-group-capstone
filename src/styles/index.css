@@ -261,12 +261,13 @@ header img {
 a {
   text-decoration: none;
   color: #000;
-  opacity: 0.7
+  opacity: 0.7;
 }
 
 .nav-list li {
   height: 40px;
 }
+
 .nav-list li:hover {
   border-bottom: 2px solid rgba(230, 77, 77, 0.6);
 }
@@ -318,6 +319,7 @@ a {
   font-weight: 500;
   letter-spacing: 5px;
 }
+
 .likes {
   display: flex;
   gap: 10px;
