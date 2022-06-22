@@ -1,5 +1,5 @@
 import { showcase } from './variables.js';
-import { displayComments } from './display.js';
+import { displayComments } from './RenderElement.mod.js';
 
 const registerEvents = () => {
   const commentBtn = document.querySelectorAll('.movie-comment');
