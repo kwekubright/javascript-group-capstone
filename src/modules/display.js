@@ -1,4 +1,4 @@
-import fetchData from './fetctData.js';
+import fetchData from './fetchData.js';
 
 const display = async () => {
   // Execution
