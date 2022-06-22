@@ -1,5 +1,5 @@
-import { involvementApiBaseURL, involvementApiAppId } from "./variables";
-import Alert from "./Alert.mod";
+import { involvementApiBaseURL, involvementApiAppId } from './variables.js';
+import Alert from './Alert.mod.js';
 
 export default class ApiServices {
   static pushComment = (id, comment, username) => {
@@ -11,18 +11,16 @@ export default class ApiServices {
       },
       body: JSON.stringify({
         item_id: id,
-        username: username,
-        comment: comment
+        username,
+        comment,
       }),
     };
     fetch(url, options)
       .then((res) => {
-        console.log(res);
         if (res.status === 201) {
-          Alert.success("Comment added successfully", document.querySelector('.alert-container'));
-        }
-        else {
-          Alert.error("Something went wrong", document.querySelector('.alert-container'));
+          Alert.success('Comment added successfully', document.querySelector('.alert-container'));
+        } else {
+          Alert.error('Something went wrong', document.querySelector('.alert-container'));
         }
       });
   }

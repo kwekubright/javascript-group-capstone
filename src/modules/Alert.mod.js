@@ -1,4 +1,4 @@
-export default class Alert { 
+export default class Alert {
   constructor(message, type, parent) {
     this.message = message;
     this.type = type;
@@ -6,7 +6,7 @@ export default class Alert {
   }
 
   show() {
-    this.parent.innerHTML = "";
+    this.parent.innerHTML = '';
     const alert = document.createElement('div');
     alert.classList.add('alert');
     alert.classList.add('flex');
@@ -20,7 +20,6 @@ export default class Alert {
     setTimeout(() => {
       alert.remove();
     }, 3000);
-    
   }
 
   static success(message, parent) {

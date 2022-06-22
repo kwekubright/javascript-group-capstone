@@ -11,8 +11,12 @@ closeBtn.addEventListener('click', () => {
 });
 
 const commentsForm = document.querySelector('#comment-form');
-commentsForm.addEventListener('submit', (e) => { 
+commentsForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  ApiServices.pushComment(e.currentTarget.dataset.id, e.currentTarget.comment.value, e.currentTarget.name.value);
+  ApiServices.pushComment(
+    e.currentTarget.dataset.id,
+    e.currentTarget.comment.value,
+    e.currentTarget.name.value,
+  );
   e.currentTarget.reset();
 });
