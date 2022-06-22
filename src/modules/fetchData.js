@@ -6,10 +6,7 @@ const fetchData = () => {
     .then((res) => res.json())
     .then((data) => {
       processResult(data);
-      let count = 0;
-      data.forEach(item => {
-        count++
-      })
+      let count = data.length;
       movieNav.textContent = `Moives (${count})`
     });
 };

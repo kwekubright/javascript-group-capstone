@@ -1,8 +1,7 @@
 import { likesApi } from "./variables";
 import { showcase } from './variables.js';
-const processResult = (prop) => {
-  let arr = [];
 
+const processResult = (prop) => {
   for (let i = 0; i < prop.length; i += 1) {
     let id = i;
     const { show } = prop[i];
@@ -12,7 +11,7 @@ const processResult = (prop) => {
       <div>
         <p class="title">${show.name}</p>
         <div class="likes">
-          <i class="bi bi-heart" id="item-${id}"></i>
+          <i class="bi bi-heart-fill" id="item-${id}"></i>
           <small class="likes-count" id="item-${id}">0 likes</small>
         </div>
       </div>
@@ -20,8 +19,6 @@ const processResult = (prop) => {
       <button>Reservations</button>
     </div>
   `;
-    arr.push(`item-${id}`)
-
   }
   let likesCounter = document.querySelectorAll('.likes-count')
 
@@ -39,7 +36,7 @@ const processResult = (prop) => {
       });
   };
 
-  fetchLikes()
+  fetchLikes();
 };
 
 export default processResult;

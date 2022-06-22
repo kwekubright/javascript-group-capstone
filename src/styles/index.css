@@ -330,3 +330,12 @@ a {
 .likes i:hover {
   cursor: pointer;
 }
+
+.bi-heart-fill {
+  color: #333;
+  opacity: 0.6;
+}
+
+.text-primary {
+  color: #e64d4d;
+}
