@@ -20,7 +20,7 @@ export default class RenderElement {
 export const displayComments = (id) => {
   const comments = ApiServices.getComments(id);
   comments.then((data) => {
-    document.getElementById('comment-count').innerHTML = commentCount(data);
+    document.getElementById('comment-count').innerHTML = (commentCount(data) !== undefined) ? commentCount(data) : 0;
     const commentsContainer = document.getElementById('comments-container');
     commentsContainer.innerHTML = '';
     data.forEach((comment) => {
