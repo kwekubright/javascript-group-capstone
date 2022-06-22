@@ -330,3 +330,11 @@ a {
 .likes i:hover {
   cursor: pointer;
 }
+
+/* Footer */
+.footer-wrapper {
+  padding: 20px;
+  border-top: 1px solid #e6e6e6;
+  margin-top: 50px;
+  background-color: #e6e6e6;
+}
