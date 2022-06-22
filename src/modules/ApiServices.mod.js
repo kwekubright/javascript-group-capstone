@@ -33,6 +33,4 @@ export default class ApiServices {
   }
 }
 
-export const commentCount = (data) => {
-  return data.length;
-}
+export const commentCount = (data) => data.length;

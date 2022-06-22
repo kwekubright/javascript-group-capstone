@@ -1,4 +1,4 @@
-import ApiServices, {commentCount} from './ApiServices.mod.js';
+import ApiServices, { commentCount } from './ApiServices.mod.js';
 
 export default class RenderElement {
   constructor(element, parent, position = 'beforeend', clearContent = false) {
