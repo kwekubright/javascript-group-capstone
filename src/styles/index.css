@@ -8,6 +8,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* Flexbox */
 .flex {
   display: flex;
@@ -389,4 +393,43 @@ a {
 
 #modal-movie-description p {
   font-size: 13px;
+}
+
+input.add-comment {
+  padding: 10px;
+  border: 1px solid #969696;
+  border-radius: 8px;
+  width: 50%;
+}
+
+textarea.add-comment {
+  border: 1px solid #969696;
+  border-radius: 8px;
+  width: 50%;
+  padding: 10px;
+}
+
+button.add-comment {
+  padding: 10px;
+  width: 100px;
+  background-color: #1ac051;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* Alert */
+.alert {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px;
+  color: #fff;
+}
+
+.alert-success {
+  background-color: #6cc052;
+}
+
+.alert-error {
+  background-color: #e64d4d;
 }

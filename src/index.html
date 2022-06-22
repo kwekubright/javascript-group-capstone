@@ -52,6 +52,19 @@
           <p><b>Language:</b> <span id="modal-movie-language"></span></p>
         </div>
         <span id="modal-movie-description"></span>
+
+        <div class="width-100">
+          <div class="alert-container margin-bottom-3"></div>
+          <!-- Comments Form -->
+          <form id="comment-form" class="add-comment">
+            <h3 class="text-center margin-bottom-3">Add comment</h3>
+            <div class="form-group flex flex-gap-20 flex-column flex-align-center">
+              <input type="text" class="form-control add-comment" name="name" id="name" required minlength="5" maxlength="50">
+              <textarea class="form-control add-comment" id="comment" rows="3" required maxlength="255"></textarea>
+              <button type="submit" class="btn btn-primary add-comment">Submit</button>
+            </div>
+          </form>
+
       </div>
     </div>
   </section>

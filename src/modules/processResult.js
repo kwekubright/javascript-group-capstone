@@ -13,6 +13,7 @@ const registerEvents = () => {
           document.getElementById('modal-movie-description').innerHTML = data.summary;
           document.getElementById('modal-movie-rating').innerHTML = data.rating.average;
           document.getElementById('modal-movie-language').innerHTML = data.language;
+          document.getElementById('comment-form').setAttribute('data-id', data.id);
           document.getElementById('movie-modal').classList.remove('hide');
         });
     });
@@ -32,7 +33,7 @@ const processResult = (prop) => {
         <small>0 likes</small>
       </div>
     </div>
-    <button class="movie-comment" data-id="${show.id}" data-title="${show.name}" data-img="${show.image.original}">Comments</button>
+    <button class="movie-comment" data-id="${show.id}">Comments</button>
     <button>Reservations</button>
   </div>
   `;
