@@ -1,5 +1,4 @@
-import { likesApi } from "./variables";
-import { showcase } from './variables.js';
+import { showcase, likesApi, allHearts } from './variables.js';
 
 const processResult = (prop) => {
   for (let i = 0; i < prop.length; i += 1) {
@@ -26,6 +25,7 @@ const processResult = (prop) => {
     fetch(likesApi)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         for(let i = 0; i < likesCounter.length; i++) {
           for(let j = 0; j < data.length; j++){
             if(likesCounter[i].id == data[j].item_id){
@@ -36,7 +36,30 @@ const processResult = (prop) => {
       });
   };
 
-  fetchLikes();
+  fetchLikes()
+
+  allHearts.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('text-primary')) {
+      if(e.target.classList.contains('bi-heart-fill')){
+        let id = e.target.id;
+        let obj = {
+          "item_id": id
+        }
+
+        e.target.classList.add('text-primary')
+
+        fetch(likesApi, {
+          method: 'POST',
+          body: JSON.stringify(obj),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        })
+          .then(fetchLikes());
+    } 
+    }
+  })
+
 };
 
 export default processResult;
