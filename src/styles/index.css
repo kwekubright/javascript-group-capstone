@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,400;1,500;1,600;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
 
 * {
   margin: 0;
@@ -236,4 +237,96 @@
 
 .bg-info {
   background-color: #3da4ff;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 2px 2px 15px #ccc;
+  z-index: 3;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+header img {
+  width: 180px;
+  height: 130px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  opacity: 0.7;
+}
+
+.nav-list li {
+  height: 40px;
+}
+
+.nav-list li:hover {
+  border-bottom: 2px solid rgba(230, 77, 77, 0.6);
+}
+
+#showcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 170px;
+}
+
+.vid-img {
+  width: 100%;
+  height: 230px;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.movie:hover {
+  box-shadow: 4px 4px 15px #ccc;
+}
+
+.movie button {
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: none;
+  background-color: rgba(51, 51, 51, 0.1);
+  font-weight: 600;
+}
+
+.movie button:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
+
+.likes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.likes i:hover {
+  cursor: pointer;
 }
