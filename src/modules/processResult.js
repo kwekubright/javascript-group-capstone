@@ -1,4 +1,5 @@
 import { showcase } from './variables.js';
+import { displayComments } from './display.js';
 
 const registerEvents = () => {
   const commentBtn = document.querySelectorAll('.movie-comment');
@@ -14,6 +15,7 @@ const registerEvents = () => {
           document.getElementById('modal-movie-rating').innerHTML = data.rating.average;
           document.getElementById('modal-movie-language').innerHTML = data.language;
           document.getElementById('comment-form').setAttribute('data-id', data.id);
+          displayComments(data.id);
           document.getElementById('movie-modal').classList.remove('hide');
         });
     });

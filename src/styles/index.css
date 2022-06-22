@@ -433,3 +433,11 @@ button.add-comment {
 .alert-error {
   background-color: #e64d4d;
 }
+
+#comments-container p {
+  font-size: 13px;
+  background: #e2e4e6;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 2px;
+}
