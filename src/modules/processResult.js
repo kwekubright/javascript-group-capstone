@@ -1,5 +1,6 @@
 import { displayComments } from './RenderElement.mod.js';
 import ApiServices from './ApiServices.mod.js';
+import movieCounter from './movieCounter.js';
 import {
   showcase,
   baseUrl,
@@ -96,13 +97,11 @@ export const fetchData = () => {
             }
           });
       };
-      fetchLikes();
 
       // add event listener to all likes button
       allHearts.addEventListener('click', (e) => {
-        fetchLikes();
-
         if (!e.target.classList.contains('text-primary')) {
+          fetchLikes();
           if (e.target.classList.contains('bi-heart-fill')) {
             const { id } = e.target;
             const obj = {
@@ -124,9 +123,10 @@ export const fetchData = () => {
           }
         }
       });
+      fetchLikes();
 
       // count number of movies
-      const count = data.length;
+      const count = movieCounter(data);
 
       // display number of movies in the nav-bar
       movieNav.textContent = `Moives (${count})`;
