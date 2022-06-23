@@ -69,11 +69,13 @@ export const fetchData = () => {
               <small class="likes-count" id="item-${id}">0 likes</small>
             </div>
           </div>
-          <button>Comments</button>
+         <button class="movie-comment" data-id="${show.id}">Comments</button>
           <button>Reservations</button>
         </div>
       `;
       }
+
+      registerEvents();
 
       // likeCounter === like button for each movies
       const likesCounter = document.querySelectorAll('.likes-count');
