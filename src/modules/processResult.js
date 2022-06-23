@@ -98,13 +98,10 @@ export const fetchData = () => {
           });
       };
 
-      fetchLikes();
-
       // add event listener to all likes button
       allHearts.addEventListener('click', (e) => {
-        fetchLikes();
-
         if (!e.target.classList.contains('text-primary')) {
+        fetchLikes();
           if (e.target.classList.contains('bi-heart-fill')) {
             const { id } = e.target;
             const obj = {
@@ -126,6 +123,7 @@ export const fetchData = () => {
           }
         }
       });
+      fetchLikes();
 
       // count number of movies
       const count = movieCounter(data);
