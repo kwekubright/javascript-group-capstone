@@ -5,7 +5,6 @@ import ApiServices from './modules/ApiServices.mod.js';
 import { displayComments } from './modules/RenderElement.mod.js';
 
 showcase.innerHtml = display();
-
 const closeBtn = document.querySelector('.close-modal');
 closeBtn.addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hide');
