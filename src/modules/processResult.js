@@ -33,6 +33,7 @@ const registerEvents = () => {
 };
 
 const processResult = (prop) => {
+  
   for (let i = 0; i < prop.length; i += 1) {
     const { show } = prop[i];
     showcase.innerHTML += `
