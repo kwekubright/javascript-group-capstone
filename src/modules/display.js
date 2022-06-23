@@ -1,8 +1,8 @@
 import fetchData from './Api.js';
 
-const display = async () => {
+const display = () => {
   // Execution
-  await fetchData();
+  fetchData();
 };
 
 export default display;
