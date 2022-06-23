@@ -508,4 +508,8 @@ button.add-comment {
   .lg-hide {
     display: flex !important;
   }
+
+  .navbar {
+    flex-direction: column;
+  }
 }
