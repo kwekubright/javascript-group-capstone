@@ -433,3 +433,12 @@ button.add-comment {
 .alert-error {
   background-color: #e64d4d;
 }
+
+.bi-heart-fill {
+  color: #333;
+  opacity: 0.6;
+}
+
+.text-primary {
+  color: #e64d4d;
+}
