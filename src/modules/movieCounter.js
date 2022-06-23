@@ -1,5 +1,3 @@
-const movieCounter = (prop) => {
-  return prop.length
-}
+const movieCounter = (prop) => prop.length;
 
 export default movieCounter;

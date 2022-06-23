@@ -97,7 +97,7 @@ export const fetchData = () => {
             }
           });
       };
-    
+
       fetchLikes();
 
       // add event listener to all likes button
