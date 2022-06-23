@@ -4,7 +4,6 @@ import { showcase } from './modules/variables.js';
 import ApiServices from './modules/ApiServices.mod.js';
 
 showcase.innerHtml = display();
-
 const closeBtn = document.querySelector('.close-modal');
 closeBtn.addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hide');
@@ -18,4 +17,9 @@ commentsForm.addEventListener('submit', (e) => {
     e.currentTarget.comment.value,
     e.currentTarget.name.value,
   );
+
+  pushComment.then(() => {
+    displayComments(e.currentTarget.dataset.id);
+    e.currentTarget.reset();
+  });
 });
