@@ -18,3 +18,17 @@ commentsForm.addEventListener('submit', (e) => {
     e.currentTarget.name.value,
   );
 });
+
+
+const showMoreBtn = document.querySelector('#show-more-btn');
+showMoreBtn.addEventListener('click', () => {
+  const movies = document.querySelectorAll('.m-hide');
+  if (movies.length === 1) {
+    showMoreBtn.classList.add('hide');
+  }
+  movies.forEach((movie, index) => {
+    if (index < 8) {
+      movie.classList.remove('m-hide');
+    }
+  });
+});
