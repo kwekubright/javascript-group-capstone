@@ -17,9 +17,4 @@ commentsForm.addEventListener('submit', (e) => {
     e.currentTarget.comment.value,
     e.currentTarget.name.value,
   );
-
-  pushComment.then(() => {
-    displayComments(e.currentTarget.dataset.id);
-    e.currentTarget.reset();
-  });
 });
