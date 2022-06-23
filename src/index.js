@@ -2,7 +2,6 @@ import './styles/index.css';
 import display from './modules/display.js';
 import { showcase } from './modules/variables.js';
 import ApiServices from './modules/ApiServices.mod.js';
-import { displayComments } from './modules/RenderElement.mod.js';
 
 showcase.innerHtml = display();
 const closeBtn = document.querySelector('.close-modal');
@@ -13,14 +12,9 @@ closeBtn.addEventListener('click', () => {
 const commentsForm = document.querySelector('#comment-form');
 commentsForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const pushComment = ApiServices.pushComment(
+  ApiServices.pushComment(
     e.currentTarget.dataset.id,
     e.currentTarget.comment.value,
     e.currentTarget.name.value,
   );
-
-  pushComment.then(() => {
-    displayComments(e.currentTarget.dataset.id);
-    e.currentTarget.reset();
-  });
 });
