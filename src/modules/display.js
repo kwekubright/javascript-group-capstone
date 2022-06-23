@@ -1,4 +1,4 @@
-import { fetchData } from "./Api.js";
+import fetchData from './Api.js';
 
 const display = async () => {
   // Execution

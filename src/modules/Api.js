@@ -1,14 +1,15 @@
-import { baseUrl, movieNav, showcase, likesApi, allHearts } from './variables.js';
+import {
+  baseUrl, movieNav, showcase, likesApi, allHearts,
+} from './variables.js';
 
 // fetch movies from the API
 const fetchData = () => {
   fetch(baseUrl)
     .then((res) => res.json())
     .then((data) => {
-
       // generate placeholder for each movie
       for (let i = 0; i < data.length; i += 1) {
-        let id = i;
+        const id = i;
         const { show } = data[i];
         showcase.innerHTML += `
         <div class="movie">
@@ -26,55 +27,58 @@ const fetchData = () => {
       `;
       }
 
-    // likeCounter === like button for each movies
-    let likesCounter = document.querySelectorAll('.likes-count');
+      // likeCounter === like button for each movies
+      const likesCounter = document.querySelectorAll('.likes-count');
 
-    
-    const fetchLikes = () => {
-      fetch(likesApi)
-      .then((res) => res.json())
-      .then((data) => {
-        for(let i = 0; i < likesCounter.length; i++) {
-          for(let j = 0; j < data.length; j++){
-            if(likesCounter[i].id == data[j].item_id){
-              likesCounter[i].textContent = data[j].likes + ' likes'
+      // fetch all likes from the involvement API and display likes for curresponding movie
+      const fetchLikes = () => {
+        fetch(likesApi)
+          .then((res) => res.json())
+          .then((data) => {
+            for (let i = 0; i < likesCounter.length; i += 1) {
+              for (let j = 0; j < data.length; j += 1) {
+                if (likesCounter[i].id === data[j].item_id) {
+                  likesCounter[i].textContent = `${data[j].likes} likes`;
+                }
+              }
             }
+          });
+      };
+      fetchLikes();
+
+      // add event listener to all likes button
+      allHearts.addEventListener('click', (e) => {
+        fetchLikes();
+
+        if (!e.target.classList.contains('text-primary')) {
+          if (e.target.classList.contains('bi-heart-fill')) {
+            const { id } = e.target;
+            const obj = {
+              item_id: id,
+            };
+
+            // add color to the like button when user clicks
+            e.target.classList.add('text-primary');
+
+            // send the data to the API
+            fetch(likesApi, {
+              method: 'POST',
+              body: JSON.stringify(obj),
+              headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+              },
+            })
+              .then(fetchLikes());
           }
         }
       });
-    };
-    fetchLikes()
 
-    allHearts.addEventListener('click', (e) => {
-      fetchLikes()
+      // count number of movies
+      const count = data.length;
 
-      if (!e.target.classList.contains('text-primary')) {
-        if(e.target.classList.contains('bi-heart-fill')){
-          let id = e.target.id;
-          let obj = {
-            "item_id": id
-          }
-          e.target.classList.add('text-primary')
-    
-          fetch(likesApi, {
-            method: 'POST',
-            body: JSON.stringify(obj),
-            headers: {
-              'Content-type': 'application/json; charset=UTF-8',
-            },
-          })
-          .then(fetchLikes()
-          )
-      } 
-      }
-    })
-
-    let count = data.length;
-    movieNav.textContent = `Moives (${count})`
-  });
-
+      // display number of movies in the nav-bar
+      movieNav.textContent = `Moives (${count})`;
+    });
 };
 
-export {
-  fetchData,
-}
+export default fetchData;
