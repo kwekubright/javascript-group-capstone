@@ -2,8 +2,9 @@ import {
   showcase,
   baseUrl,
   involvementApiAppId,
+  involvementApiBaseURL,
   allHearts,
-  movieNav
+  movieNav,
 } from './variables.js';
 
 const registerEvents = () => {
