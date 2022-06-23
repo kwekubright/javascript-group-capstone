@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { involvementApiBaseURL, involvementApiAppId } from './variables.js';
 import Alert from './Alert.mod.js';
 import { displayComments } from './RenderElement.mod.js';
@@ -25,7 +26,6 @@ export default class ApiServices {
           document.querySelector('form').reset();
         } else {
           Alert.error('Something went wrong', document.querySelector('.alert-container'));
-          
         }
       });
   }

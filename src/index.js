@@ -2,7 +2,6 @@ import './styles/index.css';
 import display from './modules/display.js';
 import { showcase } from './modules/variables.js';
 import ApiServices from './modules/ApiServices.mod.js';
-import { displayComments } from './modules/RenderElement.mod.js';
 
 showcase.innerHtml = display();
 
@@ -18,5 +17,5 @@ commentsForm.addEventListener('submit', (e) => {
     e.currentTarget.dataset.id,
     e.currentTarget.comment.value,
     e.currentTarget.name.value,
-  )
+  );
 });

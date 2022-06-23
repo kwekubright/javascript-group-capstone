@@ -1,4 +1,5 @@
-import ApiServices, { commentCount } from './ApiServices.mod.js';
+/* eslint-disable import/no-cycle */
+import { commentCount } from './ApiServices.mod.js';
 
 export default class RenderElement {
   constructor(element, parent, position = 'beforeend', clearContent = false) {
