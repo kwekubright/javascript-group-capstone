@@ -1,4 +1,4 @@
-import fetchData from './Api.js';
+import { fetchData } from './processResult.js';
 
 const display = () => {
   // Execution
