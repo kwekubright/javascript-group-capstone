@@ -1,3 +1,4 @@
+import { displayComments } from './RenderElement.mod.js';
 import {
   showcase,
   baseUrl,
@@ -21,6 +22,7 @@ const registerEvents = () => {
           document.getElementById('modal-movie-rating').innerHTML = data.rating.average;
           document.getElementById('modal-movie-language').innerHTML = data.language;
           document.getElementById('comment-form').setAttribute('data-id', data.id);
+          displayComments(data.id);
           document.getElementById('movie-modal').classList.remove('hide');
         });
     });
@@ -67,11 +69,13 @@ export const fetchData = () => {
               <small class="likes-count" id="item-${id}">0 likes</small>
             </div>
           </div>
-          <button>Comments</button>
+         <button class="movie-comment" data-id="${show.id}">Comments</button>
           <button>Reservations</button>
         </div>
       `;
       }
+
+      registerEvents();
 
       // likeCounter === like button for each movies
       const likesCounter = document.querySelectorAll('.likes-count');
