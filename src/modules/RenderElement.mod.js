@@ -17,15 +17,14 @@ export default class RenderElement {
   }
 }
 
-export const displayComments = (id) => {
-  const comments = ApiServices.getComments(id);
+export const displayComments = (comments) => {
   comments.then((data) => {
-    document.getElementById('comment-count').innerHTML = commentCount(data);
+    document.getElementById('comment-count').innerHTML = (commentCount(data) !== undefined) ? commentCount(data) : 0;
     const commentsContainer = document.getElementById('comments-container');
     commentsContainer.innerHTML = '';
     data.forEach((comment) => {
       commentsContainer.innerHTML += `
-      <div class="comment-${id}">
+      <div class="comment">
         <p>${comment.creation_date} ${comment.username}: ${comment.comment} </p>
       </div>
       `;

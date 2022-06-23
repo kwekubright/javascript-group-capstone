@@ -1,5 +1,6 @@
 import { involvementApiBaseURL, involvementApiAppId } from './variables.js';
 import Alert from './Alert.mod.js';
+import { displayComments } from './RenderElement.mod.js';
 
 export default class ApiServices {
   static pushComment = (id, comment, username) => {
@@ -19,8 +20,12 @@ export default class ApiServices {
       .then((res) => {
         if (res.status === 201) {
           Alert.success('Comment added successfully', document.querySelector('.alert-container'));
+          const comments = this.getComments(id);
+          displayComments(comments);
+          document.querySelector('form').reset();
         } else {
           Alert.error('Something went wrong', document.querySelector('.alert-container'));
+          
         }
       });
   }

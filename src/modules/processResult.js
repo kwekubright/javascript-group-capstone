@@ -1,5 +1,6 @@
 import { showcase } from './variables.js';
 import { displayComments } from './RenderElement.mod.js';
+import ApiServices from './ApiServices.mod.js';
 
 const registerEvents = () => {
   const commentBtn = document.querySelectorAll('.movie-comment');
@@ -15,7 +16,8 @@ const registerEvents = () => {
           document.getElementById('modal-movie-rating').innerHTML = data.rating.average;
           document.getElementById('modal-movie-language').innerHTML = data.language;
           document.getElementById('comment-form').setAttribute('data-id', data.id);
-          displayComments(data.id);
+          const comments = ApiServices.getComments(data.id);
+          displayComments(comments);
           document.getElementById('movie-modal').classList.remove('hide');
         });
     });
