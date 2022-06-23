@@ -9,6 +9,11 @@ closeBtn.addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hide');
 });
 
+const modalArea = document.querySelector('#movie-modal');
+modalArea.addEventListener('click', () => {
+  document.getElementById('movie-modal').classList.add('hide');
+});
+
 const commentsForm = document.querySelector('#comment-form');
 commentsForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -18,7 +23,6 @@ commentsForm.addEventListener('submit', (e) => {
     e.currentTarget.name.value,
   );
 });
-
 
 const showMoreBtn = document.querySelector('#show-more-btn');
 showMoreBtn.addEventListener('click', () => {

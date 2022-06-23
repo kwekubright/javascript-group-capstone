@@ -49,7 +49,7 @@
       <div class="modal-body flex flex-column flex-gap-20 flex-align-center flex-justify-center">
         <img id="modal-movie-img" src="" alt="">
         <h2 id="modal-movie-title"></h2>
-        <div class="stats flex flex-justify-center width-100">
+        <div class="stats flex flex-justify-center width-100 flex-gap-20">
           <p><b>Release Date:</b> <span id="modal-movie-release-date"></span></p>
           <p><b>Rating:</b> <span id="modal-movie-rating"></span></p>
           <p><b>Language:</b> <span id="modal-movie-language"></span></p>
@@ -64,8 +64,8 @@
           <form id="comment-form" class="add-comment">
             <h3 class="text-center margin-bottom-3">Add comment</h3>
             <div class="form-group flex flex-gap-20 flex-column flex-align-center">
-              <input type="text" class="form-control add-comment" name="name" id="name" required minlength="5" maxlength="50">
-              <textarea class="form-control add-comment" id="comment" rows="3" required maxlength="255"></textarea>
+              <input type="text" class="form-control add-comment" name="name" id="name" required minlength="5" maxlength="50" autocomplete="off">
+              <textarea class="form-control add-comment" id="comment" rows="3" required maxlength="255" autocomplete="off"></textarea>
               <button type="submit" class="btn btn-primary add-comment">Submit</button>
             </div>
           </form>
