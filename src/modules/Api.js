@@ -1,9 +1,12 @@
 import { baseUrl, movieNav, showcase, likesApi, allHearts } from './variables.js';
 
+// fetch movies from the API
 const fetchData = () => {
   fetch(baseUrl)
     .then((res) => res.json())
     .then((data) => {
+
+      // generate placeholder for each movie
       for (let i = 0; i < data.length; i += 1) {
         let id = i;
         const { show } = data[i];
@@ -23,7 +26,10 @@ const fetchData = () => {
       `;
       }
 
+    // likeCounter === like button for each movies
     let likesCounter = document.querySelectorAll('.likes-count');
+
+    
     const fetchLikes = () => {
       fetch(likesApi)
       .then((res) => res.json())
@@ -68,8 +74,6 @@ const fetchData = () => {
   });
 
 };
-
-
 
 export {
   fetchData,
