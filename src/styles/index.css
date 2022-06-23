@@ -441,3 +441,12 @@ button.add-comment {
   border-radius: 8px;
   margin-bottom: 2px;
 }
+
+.bi-heart-fill {
+  color: #333;
+  opacity: 0.6;
+}
+
+.text-primary {
+  color: #e64d4d;
+}
