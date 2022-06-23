@@ -24,4 +24,13 @@ export default class ApiServices {
         }
       });
   }
+
+  static getComments = async (id) => {
+    const url = `${involvementApiBaseURL}apps/${involvementApiAppId}/comments?item_id=${id}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    return data;
+  }
 }
+
+export const commentCount = (data) => data.length;
