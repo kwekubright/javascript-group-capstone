@@ -32,48 +32,26 @@ const registerEvents = () => {
   });
 };
 
-const processResult = (prop) => {
-  for (let i = 0; i < prop.length; i += 1) {
-    const { show } = prop[i];
-    showcase.innerHTML += `
-  <div class="movie">
-    <img class="vid-img" src="${show.image.original}" alt="">
-    <div>
-      <p class="title">${show.name}</p>
-      <div class="likes">
-        <i class="bi bi-heart"></i>
-        <small>0 likes</small>
-      </div>
-    </div>
-    <button class="movie-comment" data-id="${show.id}">Comments</button>
-    <button>Reservations</button>
-  </div>
-  `;
-  }
-
-  registerEvents();
-};
-
-export const fetchData = () => {
+const fetchData = () => {
   fetch(baseUrl)
     .then((res) => res.json())
     .then((data) => {
+      const result = data.splice(90, 90);
       // generate placeholder for each movie
-      for (let i = 0; i < data.length; i += 1) {
+      for (let i = 0; i < result.length; i += 1) {
         const id = i;
-        const { show } = data[i];
+        const show = result[i];
         showcase.innerHTML += `
-        <div class="movie">
+        <div class="movie ${(id > 7) ? 'm-hide' : ''}">
           <img class="vid-img" src="${show.image.original}" alt="">
           <div>
-            <p class="title">${show.name}</p>
+            <p class="title margin-bottom-2 margin-top-2">${show.name}</p>
             <div class="likes">
               <i class="bi bi-heart-fill" id="item-${id}"></i>
               <small class="likes-count" id="item-${id}">0 likes</small>
             </div>
           </div>
-         <button class="movie-comment" data-id="${show.id}">Comments</button>
-          <button>Reservations</button>
+         <button class="movie-comment" data-id="${show.id}">Comment</button>
         </div>
       `;
       }
@@ -101,7 +79,6 @@ export const fetchData = () => {
       // add event listener to all likes button
       allHearts.addEventListener('click', (e) => {
         if (!e.target.classList.contains('text-primary')) {
-          fetchLikes();
           if (e.target.classList.contains('bi-heart-fill')) {
             const { id } = e.target;
             const obj = {
@@ -119,18 +96,18 @@ export const fetchData = () => {
                 'Content-type': 'application/json; charset=UTF-8',
               },
             })
-              .then(fetchLikes());
+              .then(() => fetchLikes());
           }
         }
       });
       fetchLikes();
 
       // count number of movies
-      const count = movieCounter(data);
+      const count = movieCounter(result);
 
       // display number of movies in the nav-bar
-      movieNav.textContent = `Moives (${count})`;
+      movieNav.textContent = `Movies (${count})`;
     });
 };
 
-export default processResult;
+export default fetchData;

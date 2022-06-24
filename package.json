@@ -57,6 +57,7 @@
     "testEnvironment": "jsdom"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "dotenv": "^16.0.1",
     "party-js": "^2.1.3"
   },
