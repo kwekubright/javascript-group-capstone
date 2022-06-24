@@ -21,12 +21,12 @@ To get a local copy up and running follow these simple example steps.
 ### Clone this repository
 
 ```
-https://github.com/abdulhamiid/leaderboard.git
+https://github.com/kwekubright/javascript-group-capstone.git
 ```
 
 ### Live Demo 
 
-[Link here](https://abdulhamiid.github.io/leaderboard)
+[Link here](https://kwekubright.github.io/javascript-group-capstone/)
 
 ## This project is built with webpack 
 
@@ -82,7 +82,7 @@ Run ```npm start```
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abdulhamiid/leaderboard/issues).
+Feel free to check the [issues page](https://github.com/kwekubright/javascript-group-capstone/issues).
 
 ## Show your support
 
