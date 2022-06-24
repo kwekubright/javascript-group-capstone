@@ -9,7 +9,7 @@ const closeBtn = document.querySelector('.close-modal');
 closeBtn.addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hide');
 });
- 
+
 const commentsForm = document.querySelector('#comment-form');
 commentsForm.addEventListener('submit', (e) => {
   e.preventDefault();
