@@ -68,8 +68,8 @@ Run ```npm start```
 👤 **Kwekubright**
 
 - GitHub: [@githubhandle](https://github.com/kwekubright)
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- Twitter: [@twitterhandle](https://twitter.com/kwekubright_)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/kwekubright)
 
 
 👤 **Abdulhamid**
