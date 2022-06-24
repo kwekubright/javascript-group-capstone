@@ -2,6 +2,7 @@ import './styles/index.css';
 import display from './modules/display.js';
 import { showcase } from './modules/variables.js';
 import ApiServices from './modules/ApiServices.mod.js';
+import 'animate.css';
 
 showcase.innerHtml = display();
 const closeBtn = document.querySelector('.close-modal');
