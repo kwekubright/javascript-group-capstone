@@ -31,7 +31,7 @@
     </footer>
   </main>
 
-  <section id="movie-modal" class="hide flex flex-justify-center flex-align-center">
+  <section id="movie-modal" class="hide flex flex-column flex-justify-center flex-align-center">
     <div class="modal-content">
       <div class="modal-header flex flex-justify-right margin-bottom-3 ">
       <svg class="close-modal" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 512 512"
@@ -64,8 +64,8 @@
           <form id="comment-form" class="add-comment">
             <h3 class="text-center margin-bottom-3">Add comment</h3>
             <div class="form-group flex flex-gap-20 flex-column flex-align-center">
-              <input type="text" class="form-control add-comment" name="name" id="name" required minlength="5" maxlength="50" autocomplete="off">
-              <textarea class="form-control add-comment" id="comment" rows="3" required maxlength="255" autocomplete="off"></textarea>
+              <input type="text" class="form-control add-comment" placeholder="Add your name" name="name" id="name" required minlength="5" maxlength="50" autocomplete="off">
+              <textarea class="form-control add-comment" id="comment" placeholder="Add comment.." rows="3" required maxlength="255" autocomplete="off"></textarea>
               <button type="submit" class="btn btn-primary add-comment">Submit</button>
             </div>
           </form>
