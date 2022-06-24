@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MicroFLIX Movie Hub</title>
+</head>
+
+<body>
+  <main>
+    <nav class="navbar flex flex-align-center flex-justify-space-between ">
+      <header>
+        <h1 class="logo-text margin-left-3 animate__animated animate__heartBeat">🍿 MicroFLIX</h1>
+      </header>
+      <ul class="nav-list flex flex-row flex-align-center flex-justify-center flex-gap-20">
+        <li class="flex flex-align-center flex-justify-center"><a class="movie-nav" href="#"></a></li>
+        <li class="flex flex-align-center flex-justify-center"><a href="#">Collections</a></li>
+        <li class="flex flex-align-center flex-justify-center"><a href="#">Races</a></li>
+      </ul>
+    </nav>
+    <div id="showcase" class="flex flex-align-start flex-justify-center flex-gap-20 width-100 flex-wrap-wrap"></div>
+    <div id="show-more" class="lg-hide flex flex-justify-center margin-top-3">
+      <button id="show-more-btn" class="">Show more...</button>
+    </div>
+    <footer>
+      <div class="footer-wrapper flex flex-justify-center">
+        <p>A collaboration between Abdulhamid & Bright </p>
+      </div>
+    </footer>
+  </main>
+
+  <section id="movie-modal" class="hide flex flex-column flex-justify-center flex-align-center">
+    <div class="modal-content">
+      <div class="modal-header flex flex-justify-right margin-bottom-3 ">
+      <svg class="close-modal" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 512 512"
+        style=" fill:#000000;">
+        <path fill="#E04F5F"
+          d="M504.1,256C504.1,119,393,7.9,256,7.9C119,7.9,7.9,119,7.9,256C7.9,393,119,504.1,256,504.1C393,504.1,504.1,393,504.1,256z">
+        </path>
+        <path fill="#FFF"
+          d="M285,256l72.5-84.2c7.9-9.2,6.9-23-2.3-31c-9.2-7.9-23-6.9-30.9,2.3L256,222.4l-68.2-79.2c-7.9-9.2-21.8-10.2-31-2.3c-9.2,7.9-10.2,21.8-2.3,31L227,256l-72.5,84.2c-7.9,9.2-6.9,23,2.3,31c4.1,3.6,9.2,5.3,14.3,5.3c6.2,0,12.3-2.6,16.6-7.6l68.2-79.2l68.2,79.2c4.3,5,10.5,7.6,16.6,7.6c5.1,0,10.2-1.7,14.3-5.3c9.2-7.9,10.2-21.8,2.3-31L285,256z">
+        </path>
+      </svg>
+      </div>
+    </div>
+    <div class="modal-wrapper animate__animated animate__zoomIn">
+      <div class="modal-body flex flex-column flex-gap-20 flex-align-center flex-justify-center">
+        <img id="modal-movie-img" src="" alt="">
+        <h2 id="modal-movie-title"></h2>
+        <div class="stats flex flex-justify-center width-100 flex-gap-20">
+          <p><b>Release Date:</b> <span id="modal-movie-release-date"></span></p>
+          <p><b>Rating:</b> <span id="modal-movie-rating"></span></p>
+          <p><b>Language:</b> <span id="modal-movie-language"></span></p>
+        </div>
+        <span id="modal-movie-description"></span>
+
+        <div class="width-100">
+          <h3 class="text-center margin-bottom-3">Comments (<span id="comment-count"></span>)</h3>
+          <div id="comments-container" class=""></div>
+          <div class="alert-container margin-bottom-3 margin-top-3"></div>
+          <!-- Comments Form -->
+          <form id="comment-form" class="add-comment">
+            <h3 class="text-center margin-bottom-3">Add comment</h3>
+            <div class="form-group flex flex-gap-20 flex-column flex-align-center">
+              <input type="text" class="form-control add-comment" placeholder="Add your name" name="name" id="name" required minlength="5" maxlength="50" autocomplete="off">
+              <textarea class="form-control add-comment" id="comment" placeholder="Add comment.." rows="3" required maxlength="255" autocomplete="off"></textarea>
+              <button type="submit" class="btn btn-primary add-comment">Submit</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
