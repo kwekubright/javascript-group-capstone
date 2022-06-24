@@ -79,7 +79,6 @@ const fetchData = () => {
       // add event listener to all likes button
       allHearts.addEventListener('click', (e) => {
         if (!e.target.classList.contains('text-primary')) {
-          fetchLikes();
           if (e.target.classList.contains('bi-heart-fill')) {
             const { id } = e.target;
             const obj = {
@@ -97,7 +96,7 @@ const fetchData = () => {
                 'Content-type': 'application/json; charset=UTF-8',
               },
             })
-              .then(fetchLikes());
+              .then(response => fetchLikes());
           }
         }
       });
