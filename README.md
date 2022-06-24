@@ -2,7 +2,7 @@
 
 # MicroFLIX
 
-> This project is a development about TV series, we fetched all data from TVmaze API, Users can like movies and also give a comment. All data are recorded in the involvement API and also displayed on the screen.
+> This project is a development about TV series, we fetched all data from TVmaze API, Users can like movies and also give a comment. All data are recorded in the involvement API and also displayed on the screen. The page is also mobile responsive.
 
 
 ## Built With
