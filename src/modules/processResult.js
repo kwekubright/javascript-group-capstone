@@ -96,7 +96,7 @@ const fetchData = () => {
                 'Content-type': 'application/json; charset=UTF-8',
               },
             })
-              .then(response => fetchLikes());
+              .then(() => fetchLikes());
           }
         }
       });
