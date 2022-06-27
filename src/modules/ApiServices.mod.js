@@ -34,6 +34,10 @@ export default class ApiServices {
     const url = `${involvementApiBaseURL}apps/${involvementApiAppId}/comments?item_id=${id}`;
     const res = await fetch(url);
     const data = await res.json();
+    if (data.error !== undefined) {
+      return false;
+    }
+
     return data;
   }
 }
