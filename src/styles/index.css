@@ -49,6 +49,10 @@ body {
   align-items: flex-start;
 }
 
+.flex-justify-start {
+  justify-content: flex-start !important;
+}
+
 .flex-justify-left {
   justify-content: flex-start;
 }
@@ -124,11 +128,11 @@ body {
 
 /* Position */
 .position-relative {
-  position: relative;
+  position: relative !important;
 }
 
 .position-absolute {
-  position: absolute;
+  position: absolute !important;
 }
 
 .position-fixed {
@@ -393,16 +397,32 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 99;
+  padding-top: 2%;
+}
+
+.modal-content {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+.mod-padding-wrap {
+  padding: 20px;
 }
 
 .modal-wrapper {
-  width: 40%;
-  height: 80%;
+  width: 45%;
+  height: 100%;
   background-color: rgb(48, 47, 47);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 2px 2px 15px rgb(35, 34, 34);
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 82px rgb(0 0 0);
   overflow: scroll;
+}
+
+.mod-img-wrapper {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
 .modal-wrapper h3 {
@@ -419,7 +439,6 @@ a {
 }
 
 #modal-movie-img {
-  width: 100%;
   height: 300px;
 }
 
@@ -491,7 +510,7 @@ button.add-comment {
 }
 
 .text-primary {
-  color: #e64d4d;
+  color: #ff2f00;
 }
 
 .lg-hide {

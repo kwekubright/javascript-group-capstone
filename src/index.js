@@ -10,6 +10,13 @@ closeBtn.addEventListener('click', () => {
   document.getElementById('movie-modal').classList.add('hide');
 });
 
+const modalArea = document.querySelector('#movie-modal');
+modalArea.addEventListener('click', (e) => {
+  if (e.target.id === 'movie-modal') {
+    document.getElementById('movie-modal').classList.add('hide');
+  }
+});
+
 const commentsForm = document.querySelector('#comment-form');
 commentsForm.addEventListener('submit', (e) => {
   e.preventDefault();
