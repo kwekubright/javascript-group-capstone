@@ -4,6 +4,7 @@
 
 > This project is a development about TV series, we fetched all data from TVmaze API, Users can like movies and also give a comment. All data are recorded in the involvement API and also displayed on the screen. The page is also mobile responsive.
 
+![image](https://user-images.githubusercontent.com/5249414/175853564-0f7347f3-ef14-4c2e-a05e-37e36e0c41b9.png)
 
 ## Built With
 
