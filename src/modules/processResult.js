@@ -18,6 +18,7 @@ const registerEvents = () => {
         .then((res) => res.json())
         .then((data) => {
           document.getElementById('modal-movie-img').src = data.image.original;
+          document.getElementsByClassName('mod-img-wrapper')[0].style.backgroundImage = `url(${data.image.original})`;
           document.getElementById('modal-movie-title').innerHTML = data.name;
           document.getElementById('modal-movie-release-date').innerHTML = data.premiered;
           document.getElementById('modal-movie-description').innerHTML = data.summary;
@@ -25,7 +26,9 @@ const registerEvents = () => {
           document.getElementById('modal-movie-language').innerHTML = data.language;
           document.getElementById('comment-form').setAttribute('data-id', data.id);
           const comments = ApiServices.getComments(data.id);
-          displayComments(comments);
+          if (comments !== false) {
+            displayComments(comments);
+          }
           document.getElementById('movie-modal').classList.remove('hide');
         });
     });
@@ -43,7 +46,7 @@ const fetchData = () => {
         const show = result[i];
         showcase.innerHTML += `
         <div class="movie ${(id > 7) ? 'm-hide' : ''}">
-          <img class="vid-img" src="${show.image.original}" alt="">
+          <img class="vid-img" src="${show.image.medium}" alt="">
           <div>
             <p class="title margin-bottom-2 margin-top-2">${show.name}</p>
             <div class="likes">
@@ -51,7 +54,7 @@ const fetchData = () => {
               <small class="likes-count" id="item-${id}">0 likes</small>
             </div>
           </div>
-         <button class="movie-comment" data-id="${show.id}">Comment</button>
+         <button class="movie-comment" data-id="${show.id}">Comments</button>
         </div>
       `;
       }
